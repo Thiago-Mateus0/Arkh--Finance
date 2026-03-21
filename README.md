@@ -23,7 +23,7 @@ Nada além do que eu sei explicar.
 ## Como rodar
 
 ```
-python finance.py
+python Finance.py
 ```
 
 ---
