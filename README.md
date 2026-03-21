@@ -1,20 +1,23 @@
-# Controle Financeiro Pessoal
+# Arkhé Finance
 
 Prazer, sou o Thiago, calouro na faculdade e esse é meu segundo projeto pessoal.
 
-Sempre tive dificuldade de saber pra onde meu dinheiro ia no fim do mês. Pensei: por que não criar algo simples pra registrar isso do meu jeito? Foi daí que surgiu esse projeto.
+Sempre tive dificuldade de saber pra onde meu dinheiro ia no fim do mês. Pensei: por que não criar algo simples pra registrar isso do meu jeito? Foi daí que surgiu o Arkhé Finance.
 
 ---
 
-## O projeto
+## Sobre o projeto
 
-Simples, lógico e funcional. Feito com o que estou aprendendo agora:
+Aplicação de controle financeiro pessoal rodando no terminal. Desenvolvida em Python com banco de dados SQLite3, sem dependências externas.
 
-* `if / elif / else`
-* loop `while`
-* funções com `def`
-* banco de dados com `sqlite3`
-* consultas SQL (`SELECT`, `INSERT`, `JOIN`)
+Feito com o que estou aprendendo agora:
+
+- `if / elif / else`
+- loop `while`
+- funções com `def`
+- banco de dados com `sqlite3`
+- consultas SQL (`SELECT`, `INSERT`, `JOIN`)
+- separação de responsabilidades em módulos
 
 Nada além do que eu sei explicar.
 
@@ -22,36 +25,65 @@ Nada além do que eu sei explicar.
 
 ## Como rodar
 
-```
-python Finance.py
+```bash
+git clone https://github.com/ThiagoMateus7/Arkh--Finance
+cd Arkh--Finance
+python main.py
 ```
 
 ---
 
-## O que faz
+## Funcionalidades
 
-* Registrar entradas e saídas com categoria e data
-* Ver todas as transações com saldo calculado
-* Filtrar por entradas ou saídas
-* Criar categorias personalizadas
-* Excluir registros pelo ID
+- Registrar entradas e saídas com categoria e data
+- Filtrar transações por tipo
+- Calcular saldo automaticamente
+- Criar categorias personalizadas
+- Excluir registros pelo ID
+- Validação de data e valor na entrada
+
+---
+
+## Estrutura
+
+```
+main.py        # menu e navegação
+financas.py    # funções de negócio
+database.py    # banco, tabelas e categorias padrão
+```
 
 ---
 
 ## Próximos passos
 
-Quero que esse projeto cresça junto comigo. Conforme for aprendendo coisas novas na faculdade, vou aplicar aqui:
+**Refatoração**
+- [x] Separar banco, regras e menu em arquivos distintos
+- [ ] Validar se a categoria escolhida combina com o tipo da transação
 
-* Filtrar transações por período
-* Exportar os dados em `.csv`
-* Relatório de gastos por categoria
-* Separar melhor banco, regras e interface
+**Funcionalidades**
+- [ ] Filtrar transações por período
+- [ ] Exportar dados em `.csv`
+- [ ] Relatório de gastos por categoria
 
 ---
 
-## Por que esse projeto existe
+## Changelog
 
-Quero construir um portfólio honesto com o meu momento atual. Cada projeto vai refletir o que eu sei fazer, e o que ainda estou aprendendo.
+### v1.1 — Refatoração
+- Separação do código em três arquivos (`main.py`, `financas.py`, `database.py`)
+- Adicionado `PRAGMA foreign_keys` e `CHECK` no schema do banco
+- Validação de data com `datetime.strptime`
+- Bloqueio de valor `<= 0` e descrição vazia
+- Padronização dos valores internos sem acento (`saida`, `entrada`)
+
+### v1.0 — Primeira versão
+- Registro de entradas e saídas com categoria e data
+- Listagem com filtro por tipo
+- Cálculo de saldo
+- Categorias padrão e customizáveis
+- Exclusão por ID
+
+---
 
 > *"Be water my friend."* — Bruce Lee
 
