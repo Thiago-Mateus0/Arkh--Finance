@@ -27,7 +27,7 @@ Nada além do que eu consigo explicar com clareza.
 
 ## Como rodar
 
-```bash
+```
 git clone https://github.com/Thiago-Mateus0/arkhe-finance-api
 cd arkhe-finance-api
 
@@ -37,21 +37,45 @@ source venv/bin/activate
 pip install fastapi uvicorn
 uvicorn main:app --reload
 
-A aplicação ficará disponível em:
+```
 
+## A aplicação ficará disponível em:
+```
 http://127.0.0.1:8000
+
 http://127.0.0.1:8000/docs
-Funcionalidades
+```
+## Funcionalidades
+```
 Registrar transações de entrada e saída
+```
+```
 Listar transações cadastradas
+```
+```
 Atualizar transações por ID
+```
+```
 Deletar transações
+```
+```
 Filtrar transações por tipo
+```
+```
 Filtrar transações por categoria
+```
+```
 Filtrar transações por intervalo de datas
+```
+```
 Criar e remover categorias
+```
+```
 Visualizar resumo financeiro no dashboard
-Estrutura
+```
+
+## Estrutura
+```
 app/
 ├── database.py
 └── routes/
@@ -66,9 +90,9 @@ GET /transacoes
 POST /transacoes
 PUT /transacoes/{id}
 DELETE /transacoes/{id}
-
-Filtros disponíveis:
-
+```
+## Filtros disponíveis:
+```
 ?tipo=entrada
 ?categoria_id=1
 ?data_inicio=YYYY-MM-DD&data_fim=YYYY-MM-DD
@@ -79,31 +103,36 @@ DELETE /categorias/{id}
 Dashboard
 GET /dashboard
 Próximos passos
+```
 
-Estrutura
-
+## Estrutura
+```
  Separar schemas com Pydantic
  Criar uma camada de services
  Melhorar a organização interna da aplicação
+```
 
-Funcionalidades
+## Funcionalidades
 
  Adicionar autenticação
  Implementar paginação
  Expandir os filtros das rotas
 
-Qualidade
+## Qualidade
 
  Adicionar testes automatizados
  Melhorar o tratamento de erros
  Fazer deploy da API
-Changelog
+ 
+## Changelog
+```
 v1.0 — Primeira versão
 CRUD de transações
 CRUD de categorias
 Filtros por tipo, categoria e data
 Dashboard com resumo financeiro
-
+```
+```
 "Be water, my friend." — Bruce Lee
-
+```
 Feito por Thiago Mateus
